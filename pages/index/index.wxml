@@ -1,0 +1,27 @@
+<view
+  class="container"
+  style="height: {{ windowHeight }}px;"
+>
+  <view class="container-top">
+    <view
+      class="custom-header"
+      style="height: {{ statusBarHeight + navBarHeight }}px;"
+    >
+      <!-- 占据状态栏的高度 -->
+      <view class="custom-header__status-bar" style="height: {{ statusBarHeight }}px;"></view>
+      <view
+        style="height: {{ navBarHeight }}px; line-height: {{ navBarHeight }}px;"
+        class="u-flex u-p-l-30 u-p-r-30"
+      >
+        <view
+          style="height: {{ menuButtonHeight }}px; line-height: {{ menuButtonHeight }}px; width: {{ menuButtonWidth }}px; border-radius: {{ menuButtonHeight / 2 }}px;"
+          class="u-flex u-p-l-20 u-p-r-20 custom-header__opt-button"
+        >
+          <text class="iconfont icon-arrow-left u-flex-1" bind:tap="goBack"></text>
+          <text class="iconfont iconvertical_line custom-header__opt-button-interval u-flex-1"></text>
+          <text class="iconfont icon-home-fill u-flex-1" bind:tap="goHome"></text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
